@@ -18,37 +18,43 @@ Because you're a nice person, you always round up the tip, regardless of the ser
 
 public class TipCalculator {
     public static void main(String[] args) {
-        System.out.println(calculateTip(30d, "poor"));
+        System.out.println(calculateTip(100, "sdfsdf"));
     }
 
     public static Integer calculateTip(double amount, String rating) {
+        Integer resultI = 0;
         double tip = 1.0;
         rating = rating.toLowerCase();
+
         switch (rating) {
             case "terrible":
-                tip = 1.0;
+                tip = 0;
                 break;
             case "poor":
-                tip = 0.95;
+                tip = 0.05;
                 break;
             case "good":
-                tip = 0.9;
+                tip = 0.1;
                 break;
             case "great":
-                tip = 0.85;
+                tip = 0.15;
                 break;
             case "excellent":
-                tip = 0.8;
+                tip = 0.2;
+                break;
+            default:
+                resultI = null;
         }
 
         double result = amount * tip;
-        System.out.println(result);
-        int resultI;
 
-        if (result % (int)result >= 0.5){
-            resultI = (int)result + 1;
-        } else resultI = (int)result;
-
+        if (resultI != null && (result % (int) result >= 0.5 && amount >=1) || amount % (int)amount >= 0.5) {
+            resultI = (int) result + 1;
+        } else if (resultI != null && result % (int) result < 0.5) {
+            resultI = (int) result;
+        }
         return resultI;
     }
+
 }
+
