@@ -19,17 +19,37 @@ import java.util.Arrays;
 
 public class LarioAndMuigiPipeProblem {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(pipeFix(new int[]{-1,4})));
+        System.out.println(Arrays.toString(pipeFix(new int[]{6, 9})));
     }
 
     public static int[] pipeFix(int[] numbers) {
-        int from = numbers [0];
-        int to = numbers [numbers.length - 1];
-        int [] array = new int[numbers[numbers.length - 1]];
+        int firstElIndex = 0;
+        int lastElIndex = numbers.length - 1;
+        int from = numbers[firstElIndex];
+        int arraySize = 1;
+
+        if (numbers[firstElIndex] < 0 && numbers[lastElIndex] < 0) {
+            arraySize = Math.abs(numbers[firstElIndex]);
+        } else if (numbers[firstElIndex] < 0 && numbers[lastElIndex] >= 0) {
+            arraySize = (Math.abs(numbers[firstElIndex])) + (Math.abs(numbers[lastElIndex])) + 1;
+        } else if (numbers[firstElIndex] >= 0 && numbers[lastElIndex] >= 0) {
+            arraySize = Math.abs(numbers[lastElIndex]) - Math.abs(numbers[firstElIndex]) + 1;
+            if (numbers[firstElIndex] == 0){
+                arraySize += 1;
+            }
+        }
+
+        int[] array = new int[arraySize];
+
         int c = 0;
-        for (int i = from; i <= array.length; i++) {
-            array [c] = i;
-            c ++;
+        int iterator = 0;
+        for (int i = from; iterator <= array.length; i++) {
+            array[c] = i;
+            if (c == array.length - 1) {
+                break;
+            }
+            c++;
+            iterator ++;
         }
         return array;
     }
