@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 public class LarioAndMuigiPipeProblem {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(pipeFix(new int[]{6, 9})));
+        System.out.println(Arrays.toString(pipeFix(new int[]{0, 7, 8})));
     }
 
     public static int[] pipeFix(int[] numbers) {
@@ -34,9 +34,6 @@ public class LarioAndMuigiPipeProblem {
             arraySize = (Math.abs(numbers[firstElIndex])) + (Math.abs(numbers[lastElIndex])) + 1;
         } else if (numbers[firstElIndex] >= 0 && numbers[lastElIndex] >= 0) {
             arraySize = Math.abs(numbers[lastElIndex]) - Math.abs(numbers[firstElIndex]) + 1;
-            if (numbers[firstElIndex] == 0){
-                arraySize += 1;
-            }
         }
 
         int[] array = new int[arraySize];
