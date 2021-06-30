@@ -8,12 +8,12 @@ Return the toal cost rounded to 2 decimal places. Also you can guess that there 
 
 public class FuelCalculator {
     public static void main(String[] args) {
-        System.out.println(fuelPrice(5, 1.23d));
+        System.out.println(fuelPrice(175, 2.88d));
     }
 
     public static double fuelPrice(int litres, double pricePerLitre) {
 
-        double purchase = 0;
+        double purchase = 0.0;
         double finalPrice;
         double tmp = litres;
 
@@ -22,7 +22,9 @@ public class FuelCalculator {
                 break;
             }
             tmp -= 2;
-            purchase += 5;
+            if (purchase < 0.25) {
+                purchase += 0.05;
+            }
         }
 
         finalPrice = pricePerLitre - purchase;
