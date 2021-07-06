@@ -10,15 +10,25 @@ Examples
 
 public class FindTheStrayNumber {
     public static void main(String[] args) {
-        System.out.println(stray(new int[]{1, 1, 2}));
+        System.out.println(stray(new int[]{1, 1, 1, 1, 1, 5}));
     }
 
     static int stray(int[] numbers) {
 
         int result = 0;
-        for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] != numbers[i - 1]) {
-                result = numbers[i];
+
+        if (numbers.length > 1) {
+            for (int i = 1; i < numbers.length; i++) {
+                if (numbers [i] != numbers[i - 1] && numbers[i-1] != numbers[numbers.length -1]) {
+                    result = numbers [i - 1];
+                    break;
+                } else if (numbers [i] != numbers[i - 1] && numbers[i-1] == numbers[numbers.length -1]) {
+                    result = numbers [i];
+                    break;
+                } else if (numbers [0] == numbers[1] && numbers[0] != numbers[numbers.length -1]) {
+                    result = numbers [numbers.length -1];
+                    break;
+                }
             }
         }
 
