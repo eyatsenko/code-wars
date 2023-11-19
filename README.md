@@ -1,2 +1,2 @@
 # CodeWars
-My completed tasks from CodeWars
+My completed tasks from CodeWars.
