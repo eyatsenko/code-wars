@@ -1,7 +1,7 @@
 public class FirstClass {
     public static void main(String[] args) {
-        byte z = 3;
-        byte x = 4;
+        byte z = 5;
+        byte x = 6;
         System.out.println(sum(z, x));
     }
 
