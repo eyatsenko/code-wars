@@ -1,3 +1,7 @@
 /out/
 /shelf/
 /workspace.xml
+.idea/
+*.iml
+
+target/

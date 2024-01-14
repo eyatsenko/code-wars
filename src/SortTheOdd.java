@@ -5,6 +5,7 @@ public class SortTheOdd {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(sortArray(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1, 0})));
         System.out.println(Arrays.toString(sortArray(new int[]{ 5, 3, 2, 8, 1, 4 })));
+
     }
 
     public static int[] sortArray(int[] array) {
