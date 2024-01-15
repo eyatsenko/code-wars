@@ -35,7 +35,6 @@ public class YourOrderPlease {
     }
 
     private static boolean containsDigit(String word, int digit) {
-        // Перевірка, чи слово містить цифру, рівну digit
         for (char c : word.toCharArray()) {
             if (Character.isDigit(c) && Character.getNumericValue(c) == digit) {
                 return true;
@@ -43,4 +42,12 @@ public class YourOrderPlease {
         }
         return false;
     }
+
+/*    public class Order {
+        public static String order(String words) {
+            return Arrays.stream(words.split(" "))
+                    .sorted(Comparator.comparing(s -> Integer.valueOf(s.replaceAll("\\D", ""))))
+                    .reduce((a, b) -> a + " " + b).get();
+        }
+    }*/
 }
