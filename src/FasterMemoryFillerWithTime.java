@@ -15,8 +15,8 @@ public class FasterMemoryFillerWithTime {
         } catch (OutOfMemoryError e) {
             long endTime = System.currentTimeMillis(); // Кінцевий час
             long elapsedTime = endTime - startTime; // Час, що пройшов
-            System.out.println("Час, витрачений на заповнення ОЗУ: " + elapsedTime + " мс");
             System.out.println("Пам'ять переповнена!");
+            System.out.println("Час, витрачений на заповнення ОЗУ: " + elapsedTime + " мс");
         }
     }
 }
