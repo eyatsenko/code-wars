@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 public class ArrayDiff {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(ArrayDiff.arrayDiff(new int[]{1, 2, 3, 4, 5, 5, 2, 1}, new int[]{2, 2, 5, 3})));
-        ;
     }
 
     public static int[] arrayDiff(int[] a, int[] b) {
