@@ -22,34 +22,34 @@
 
 public class BouncingBalls {
     public static void main(String[] args) {
-        // Primary tests
-//        System.out.println("Primary tests");
+//      Primary tests
+        System.out.println("Primary tests");
 
-//        System.out.println("The result is: " + bouncingBall(3.00, 0.66, 1.50));
-//        System.out.println("The result is: " + bouncingBall(30.00, 0.66, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.00, 0.66, 1.50));
+        System.out.println("The result is: " + bouncingBall(30.00, 0.66, 1.50));
 
         System.out.println();
 
         // Additional tests
         System.out.println("Additional tests");
-//        System.out.println("The result is: " + bouncingBall(1.55, 0.99, 1.50));
-//        System.out.println("The result is: " + bouncingBall(3.00, 0.33, 1.50));
-//        System.out.println("The result is: " + bouncingBall(3.00, 0.5, 1.50));
-//        System.out.println("The result is: " + bouncingBall(3.00, 0.01, 1.50));
-//        System.out.println("The result is: " + bouncingBall(3.5, 0.5, 1.75));
+        System.out.println("The result is: " + bouncingBall(1.55, 0.99, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.00, 0.33, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.00, 0.5, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.00, 0.01, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.5, 0.5, 1.75));
         System.out.println("The result is: " + bouncingBall(2.0, 0.5, 1.0));
 
-//        System.out.println("The result is: " + bouncingBall(3.00, 1.00, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.00, 1.00, 1.50));
 
         System.out.println();
 
-        // Negative tests
-//        System.out.println("Negative tests:");
+//         Negative tests
+        System.out.println("Negative tests:");
 
-//        System.out.println("The result is: " + bouncingBall(0.00, 0.66, 1.50));
-//        System.out.println("The result is: " + bouncingBall(3.00, 0.0, 1.50));
-//        System.out.println("The result is: " + bouncingBall(3.00, 1.2, 1.50));
-//        System.out.println("The result is: " + bouncingBall(3.00, 0.66, 5.50));
+        System.out.println("The result is: " + bouncingBall(0.00, 0.66, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.00, 0.0, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.00, 1.2, 1.50));
+        System.out.println("The result is: " + bouncingBall(3.00, 0.66, 5.50));
 
         System.out.println();
 
